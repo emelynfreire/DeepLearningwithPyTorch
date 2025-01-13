@@ -1,60 +1,87 @@
-# Guia de Execução: Projeto Rock, Paper, Scissors
+# Como Executar um Arquivo Notebook no GitHub
 
-Este repositório implementa um projeto de aprendizado profundo baseado no capítulo 6 do livro *Deep Learning with PyTorch Step-by-Step*.
-
----
-
-## Requisitos
-
-Antes de iniciar, certifique-se de ter instalado:
-
-- Python 3.7+
-- PyTorch
-- Bibliotecas adicionais: `torchvision`, `matplotlib`
-
-Instale as dependências com:
-```bash
-pip install -r requirements.txt
-```
+Arquivos notebook do Jupyter (extensão `.ipynb`) podem ser executados de várias maneiras. Aqui estão as opções mais comuns:
 
 ---
 
-## Estrutura do Repositório
+## 1. Usar o Google Colab
+Google Colab é uma plataforma gratuita baseada em nuvem para executar notebooks.
 
-- **`colab_script.ipynb`**: Notebook completo com o código comentado e organizado.
-- **`src/`**: Pasta contendo os módulos auxiliares do projeto.
-- **`data/`**: Contém os datasets utilizados (substituir conforme necessidade).
+### Passos:
+1. **Abrir no Colab diretamente**:
+   - Acesse o repositório no GitHub.
+   - Substitua `github.com` no link por `colab.research.google.com/github`. Por exemplo:
+     ```
+     https://github.com/usuario/repositorio/blob/main/notebook.ipynb
+     ```
+     Torne-se:
+     ```
+     https://colab.research.google.com/github/usuario/repositorio/blob/main/notebook.ipynb
+     ```
 
----
+2. **Ou abra manualmente no Colab**:
+   - Copie o URL do arquivo `.ipynb` no GitHub.
+   - Abra o [Google Colab](https://colab.research.google.com/).
+   - Clique em **File > Open notebook** (Arquivo > Abrir notebook).
+   - Vá até a aba **GitHub**, cole o URL e carregue o notebook.
 
-## Passos para Execução
-
-1. **Configuração dos Dados:**
-   - Coloque os dados nas pastas `data/rps` e `data/rps-test-set`.
-   - Certifique-se de que os arquivos de imagem estejam organizados em subpastas por classe.
-
-2. **Executar o Notebook:**
-   - Abra o arquivo `colab_script.ipynb` no Google Colab ou Jupyter Notebook.
-   - Siga as seções para reproduzir o experimento.
-
-3. **Treinamento e Avaliação:**
-   - O notebook inclui treinamento com scheduler de learning rate e análise de gradientes.
-
-4. **Visualizações:**
-   - Apresente gráficos de perda e gradientes para compreender o desempenho do modelo.
-
----
-
-## Resultados
-
-- **Melhor taxa de aprendizado:** Determinada pelo teste de intervalo (visualizado no notebook).
-- **Scheduler Cíclico:** Ajusta dinamicamente o `learning rate`, promovendo convergência.
-- **Visualização de Gradientes:** Insights sobre como o modelo aprende ao longo do treinamento.
+3. Execute as células no Colab diretamente.
 
 ---
 
-## Referências
+## 2. Usar o VS Code
+Se você prefere executar localmente, o VS Code é uma ótima ferramenta.
 
-- Livro: *Deep Learning with PyTorch Step-by-Step* por Daniel Voigt Godoy
-- Repositório de Referência: [https://github.com/emelynfreire/DeepLearningwithPyTorch](https://github.com/emelynfreire/DeepLearningwithPyTorch)
+### Passos:
+1. **Baixar o notebook do GitHub**:
+   - No GitHub, clique em **Raw** no arquivo `.ipynb` e salve o conteúdo como um arquivo local (Ctrl+S ou Cmd+S).
 
+2. **Abrir no VS Code**:
+   - Certifique-se de ter a extensão **Jupyter** instalada no VS Code.
+   - Abra o arquivo `.ipynb` no VS Code.
+   - Clique em **Run All** ou execute célula por célula.
+
+3. **Configure o ambiente Python**:
+   - Instale o Python e as bibliotecas necessárias no seu ambiente virtual.
+
+---
+
+## 3. Usar Jupyter Notebook Localmente
+Outra opção é usar o Jupyter Notebook na sua máquina.
+
+### Passos:
+1. **Baixar o notebook**:
+   - Faça o download do arquivo `.ipynb` no GitHub.
+
+2. **Instalar Jupyter**:
+   - Certifique-se de ter o Jupyter instalado no seu ambiente Python:
+     ```bash
+     pip install notebook
+     ```
+
+3. **Executar o notebook**:
+   - No terminal, navegue até a pasta onde o arquivo `.ipynb` está salvo.
+   - Execute o comando:
+     ```bash
+     jupyter notebook
+     ```
+   - Seu navegador abrirá o ambiente do Jupyter, onde você pode carregar e executar o notebook.
+
+---
+
+## 4. Usar Plataformas Online (Binder ou Kaggle)
+
+### a) **Binder**
+   - Acesse [Binder](https://mybinder.org/).
+   - Insira o link do repositório GitHub que contém o notebook.
+   - Clique em "Launch" para criar um ambiente online onde você pode executar o notebook.
+
+### b) **Kaggle**
+   - Faça upload do notebook no [Kaggle Notebooks](https://www.kaggle.com/).
+   - Você pode executar o arquivo diretamente usando os recursos do Kaggle.
+
+---
+
+## Dicas Adicionais:
+- Certifique-se de que todas as bibliotecas usadas no notebook estejam instaladas no ambiente onde será executado.
+- Alguns notebooks podem depender de arquivos auxiliares (como datasets). Verifique se eles estão disponíveis no repositório e faça o download, se necessário.
